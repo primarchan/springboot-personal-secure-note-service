@@ -29,6 +29,7 @@ public class SpringSecurityConfig extends WebSecurityConfigurerAdapter {
     protected void configure(HttpSecurity http) throws Exception {
         // basic authentication
         http.httpBasic().disable(); // basic authentication filter 비활성화
+        // http.httpBasic(); // basic authentication filter 활성화
         // csrf
         http.csrf();
         // remember-me
@@ -77,4 +78,5 @@ public class SpringSecurityConfig extends WebSecurityConfigurerAdapter {
             return user;
         };
     }
+
 }
